@@ -1,4 +1,4 @@
-package cn.riverluoo.activemq;
+package cn.riverluoo.activemq.ptp;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;

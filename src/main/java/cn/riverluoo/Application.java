@@ -1,27 +1,41 @@
 package cn.riverluoo;
 
-import cn.riverluoo.activemq.Client;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.riverluoo.activemq.ptp.Client;
+import cn.riverluoo.activemq.topic.Producer;
+import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jms.annotation.EnableJms;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.jms.Destination;
 
 @SpringBootApplication
 @EnableJms
 public class Application {
 
-    @Autowired
-    Client client;
+    @Resource
+    private Producer producer;
+    @Resource
+    private Client client;
+
 
     @PostConstruct
     public void init() {
 
-        for (int i = 0; i < 10; i++) {
-            client.send("发送消息----我吃饱了-----");
+        Destination destination = new ActiveMQQueue("test-topic");
+
+        for (Integer i = 0; i <= 2000; i++) {
+            producer.sendMessage(destination, i.toString());
         }
-        System.out.println("发送消息完毕");
+
+        for (Integer i = 0; i <= 20; i++) {
+            client.send(i.toString());
+        }
+
+
+        System.out.println("消息发送完毕");
     }
 
     public static void main(String[] args) {

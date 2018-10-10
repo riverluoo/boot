@@ -1,4 +1,4 @@
-package cn.riverluoo.activemq;
+package cn.riverluoo.activemq.ptp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;

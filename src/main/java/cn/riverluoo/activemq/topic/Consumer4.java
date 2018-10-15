@@ -1,15 +1,10 @@
 package cn.riverluoo.activemq.topic;
 
 
-import cn.riverluoo.activemq.util.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jms.annotation.JmsListener;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
-
-import java.time.LocalTime;
-import java.util.Objects;
 
 @Component
 public class Consumer4 {

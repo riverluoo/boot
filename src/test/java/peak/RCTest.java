@@ -1,4 +1,4 @@
-package com.example.springboot;
+package peak;
 
 public class RCTest {
 

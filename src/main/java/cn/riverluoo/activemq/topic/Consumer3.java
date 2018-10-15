@@ -1,6 +1,5 @@
 package cn.riverluoo.activemq.topic;
 
-import cn.riverluoo.activemq.util.Test;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 

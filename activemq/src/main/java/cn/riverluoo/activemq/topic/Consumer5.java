@@ -9,7 +9,7 @@ public class Consumer5 {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(Consumer5.class);
 
-    Test test = new Test();
+   
 
 //    //@JmsListener(destination = "test-topic")
 //    public void receive(String message) {

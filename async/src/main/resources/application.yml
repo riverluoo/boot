@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+
+logging:
+  level:
+    ROOT: INFO
+    com:
+      xncoding: DEBUG
+  file: ./logs/async.log

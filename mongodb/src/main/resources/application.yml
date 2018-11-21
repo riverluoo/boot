@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      uri: mongodb://121.43.175.75:27017/test
+
+logging:
+  level:
+    ROOT: INFO
+    com:
+      xncoding: DEBUG
+  file: ./logs/mongodb.log

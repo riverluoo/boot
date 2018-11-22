@@ -4,6 +4,8 @@ import com.riverluoo.dao.entity.User;
 import com.riverluoo.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -16,6 +18,8 @@ import javax.annotation.Resource;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class MongodbTest {
+
+    private static final Logger log = LoggerFactory.getLogger(MongodbTest.class);
 
 
     @Resource
@@ -30,6 +34,18 @@ public class MongodbTest {
     @Test
     public void selectAll(){
         Object all = userService.findAll();
-        System.out.println(all);
+        log.info("结果"+all);
+    }
+
+    @Test
+    public void find(){
+        User dora = userService.findByName("dora");
+        log.info("查询结果"+dora);
+    }
+
+    @Test
+    public void deleteAll(){
+        userService.deleteAll();
+
     }
 }

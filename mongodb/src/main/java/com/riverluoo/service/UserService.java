@@ -24,4 +24,12 @@ public class UserService {
     public Object findAll() {
         return repository.findAll();
     }
+
+    public User findByName(String name){
+        return repository.findByFirstName(name);
+    }
+
+    public void deleteAll(){
+        repository.deleteAll();
+    }
 }

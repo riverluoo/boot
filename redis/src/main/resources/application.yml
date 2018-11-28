@@ -47,5 +47,5 @@ logging:
     ROOT: INFO
     com:
       xncoding: DEBUG
-  file: D:/logs/app.log
+  file: ./logs/redis.log
 

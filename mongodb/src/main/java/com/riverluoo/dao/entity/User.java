@@ -16,12 +16,14 @@ public class User {
     private String id;
     private String firstName;
     private String lastName;
+    private Integer age;
 
     public User() {
     }
 
-    public User(String firstName, String lastName) {
+    public User(String firstName, String lastName,Integer age) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age=age;
     }
 }

@@ -35,6 +35,7 @@ public class UserService {
      */
     public void createUser(User user) {
         logger.info("创建用户start...");
+
         userMapper.insert(user);
     }
 

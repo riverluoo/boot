@@ -8,9 +8,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
@@ -24,9 +26,11 @@ public class UserServiceTest {
     @Autowired
     private UserService userService;
 
+    private RedisTemplate redisTemplate;
+
     @Test
     public void inserTest() {
-        int id = new Random().nextInt(10000);
+        int id = new Random().nextInt(9999);
         User user = new User(id, "root", "root");
         userService.createUser(user);
 
@@ -46,4 +50,7 @@ public class UserServiceTest {
         User user1 = userService.getById(52);
         assertEquals(user1.getPassword(), "admin");
     }
+
+
+
 }

@@ -1,0 +1,5 @@
+2018-12-05 18:05:48.673  INFO 26638 --- [main] com.riverluoo.Application                : Starting Application on yan.local with PID 26638 (/Users/riverluoo/Me/SpringBoot/redis/target/classes started by riverluoo in /Users/riverluoo/Me/SpringBoot)
+2018-12-05 18:05:48.677  INFO 26638 --- [main] com.riverluoo.Application                : The following profiles are active: dev
+2018-12-05 18:05:49.267  INFO 26638 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-12-05 18:05:49.269  INFO 26638 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-12-05 18:05:49.295  INFO 26638 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.

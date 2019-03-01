@@ -42,6 +42,7 @@ public class DataSourceAspect implements Ordered {
             return point.proceed();
         } finally {
              DataSourceHolder.clearDataSourceType();
+             Object
         }
     }
     @Override
